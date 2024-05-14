@@ -1,0 +1,174 @@
+<mvc:View controllerName="com.snet.re.order.zreturnorders.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"  xmlns:ndc="sap.ndc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content >
+    <HBox class="sapUiSmallMargin">
+			<Input id="sampleBarcodeScannerResult1" value="" class="sapUiTinyMarginBegin" placeholder="Enter Serial Number" />
+			<!-- <ndc:BarcodeScannerButton
+			id="sampleBarcodeScannerButton1"
+			scanSuccess="onScanSuccess"
+			scanFail="onScanError"
+			inputLiveUpdate="onScanLiveupdate"
+			dialogTitle="Barcode Scanner Button Sample" 	disableBarcodeInputDialog="true"/> -->
+			<Button text="scan" icon="sap-icon://bar-code"  press="onScanPressed" id="idScan1" tooltip="scan1"/>
+
+			<Input id="sampleBarcodeScannerResult2" value="" class="sapUiTinyMarginBegin" placeholder="Enter Serial Number"/>
+			<Button text="scan" icon="sap-icon://bar-code"  press="onScanPressed" id="idScan2" tooltip="scan2"/>
+			<!-- <ndc:BarcodeScannerButton
+			id="sampleBarcodeScannerButton2"
+			scanSuccess="onScanSuccess"
+			scanFail="onScanError"
+			inputLiveUpdate="onScanLiveupdate"
+			dialogTitle="Barcode Scanner Button Sample" disableBarcodeInputDialog="true"	/> -->
+
+			<Input id="sampleBarcodeScannerResult3" value="" class="sapUiTinyMarginBegin" placeholder="Enter Serial Number"/>
+			<Button text="scan" icon="sap-icon://bar-code"  press="onScanPressed" id="idScan3" tooltip="scan3"/>
+			<!-- <ndc:BarcodeScannerButton
+			id="sampleBarcodeScannerButton3"
+			scanSuccess="onScanSuccess"
+			scanFail="onScanError"
+			inputLiveUpdate="onScanLiveupdate"
+			dialogTitle="Barcode Scanner Button Sample" disableBarcodeInputDialog="true"	/> -->
+
+			<Input id="sampleBarcodeScannerResult4" value="" class="sapUiTinyMarginBegin" placeholder="Enter Serial Number"/>
+			<Button text="scan" icon="sap-icon://bar-code"  press="onScanPressed" id="idScan4" tooltip="scan4"/>
+			<!-- <ndc:BarcodeScannerButton
+			id="sampleBarcodeScannerButton4"
+			scanSuccess="onScanSuccess"
+			scanFail="onScanError"
+			inputLiveUpdate="onScanLiveupdate"
+			dialogTitle="Barcode Scanner Button Sample" disableBarcodeInputDialog="true"	/> -->
+
+			<Input id="sampleBarcodeScannerResult5" value="" class="sapUiTinyMarginBegin" placeholder="Enter Serial Number"/>
+			<Button text="scan" icon="sap-icon://bar-code"  press="onScanPressed" id="idScan5" tooltip="scan5"/>
+			<!-- <ndc:BarcodeScannerButton
+			id="sampleBarcodeScannerButton5"
+			scanSuccess="onScanSuccess"
+			scanFail="onScanError"
+			inputLiveUpdate="onScanLiveupdate"
+			dialogTitle="Barcode Scanner Button Sample" disableBarcodeInputDialog="true"	/> -->
+			<Button type="Emphasized" text="Reset" press="onPressReset"  class="sapUiLargeMarginBegin"/>
+
+			
+	</HBox>
+
+	 <HBox class="sapUiSmallMargin">
+			<Input id="sampleBarcodeScannerResult6" value="" class="sapUiTinyMarginBegin" placeholder="Enter Serial Number"/>
+			<Button text="scan" icon="sap-icon://bar-code"  press="onScanPressed" id="idScan6" tooltip="scan6"/>
+			<!-- <ndc:BarcodeScannerButton
+			id="sampleBarcodeScannerButton6"
+			scanSuccess="onScanSuccess"
+			scanFail="onScanError"
+			inputLiveUpdate="onScanLiveupdate"
+			dialogTitle="Barcode Scanner Button Sample" 	disableBarcodeInputDialog="true"/> -->
+
+			<Input id="sampleBarcodeScannerResult7" value="" class="sapUiTinyMarginBegin" placeholder="Enter Serial Number"/>
+			<Button text="scan" icon="sap-icon://bar-code"  press="onScanPressed" id="idScan7" tooltip="scan7"/>
+			<!-- <ndc:BarcodeScannerButton
+			id="sampleBarcodeScannerButton7"
+			scanSuccess="onScanSuccess"
+			scanFail="onScanError"
+			inputLiveUpdate="onScanLiveupdate"
+			dialogTitle="Barcode Scanner Button Sample" disableBarcodeInputDialog="true"	/> -->
+
+			<Input id="sampleBarcodeScannerResult8" value="" class="sapUiTinyMarginBegin" placeholder="Enter Serial Number"/>
+				<Button text="scan" icon="sap-icon://bar-code"  press="onScanPressed" id="idScan8" tooltip="scan8"/>
+			<!-- <ndc:BarcodeScannerButton
+			id="sampleBarcodeScannerButton8"
+			scanSuccess="onScanSuccess"
+			scanFail="onScanError"
+			inputLiveUpdate="onScanLiveupdate"
+			dialogTitle="Barcode Scanner Button Sample" disableBarcodeInputDialog="true"	/> -->
+
+			<Input id="sampleBarcodeScannerResult9" value="" class="sapUiTinyMarginBegin" placeholder="Enter Serial Number"/>
+				<Button text="scan" icon="sap-icon://bar-code"  press="onScanPressed" id="idScan9" tooltip="scan9"/>
+			<!-- <ndc:BarcodeScannerButton
+			id="sampleBarcodeScannerButton9"
+			scanSuccess="onScanSuccess"
+			scanFail="onScanError"
+			inputLiveUpdate="onScanLiveupdate"
+			dialogTitle="Barcode Scanner Button Sample" disableBarcodeInputDialog="true"	/> -->
+
+			<Input id="sampleBarcodeScannerResult10" value="" class="sapUiTinyMarginBegin" placeholder="Enter Serial Number"/>
+				<Button text="scan" icon="sap-icon://bar-code"  press="onScanPressed" id="idScan10" tooltip="scan10"/>
+			<!-- <ndc:BarcodeScannerButton
+			id="sampleBarcodeScannerButton10"
+			scanSuccess="onScanSuccess"
+			scanFail="onScanError"
+			inputLiveUpdate="onScanLiveupdate"
+			dialogTitle="Barcode Scanner Button Sample" disableBarcodeInputDialog="true"	/> -->
+
+			<Button type="Emphasized" text="Search" press="onPressSearch"  class="sapUiLargeMarginBegin"/>
+			
+	</HBox>
+	<VBox>
+		<ToolbarSpacer />
+		<ToolbarSpacer />
+	</VBox>
+	<VBox>
+	
+
+		<Table id="idSerNoTable" mode="SingleSelectLeft" selectionChange="onSelectRow" items="{returnOrderModel>/}" >
+		<headerToolbar>
+			<OverflowToolbar>
+				<content>
+					<Title text="Order Details" level="H2"/>
+					<ToolbarSpacer />
+				<Button
+						id ="idReturnOrderBtn"
+						text="Create Return Order"
+						press="onPressedCreateRE" enabled="false"/>
+					<!-- <Button
+						id ="idPGRBtn"
+						text="Create Service Del. PGR"
+						press="onPressedCreatePGR" enabled="false"/> -->
+					
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column>
+				<Text text="Serial No." />
+			</Column>
+			<Column>
+				<Text text="Status" />
+			</Column>
+			<Column>
+				<Text text="Return Order" />
+			</Column>
+			<Column>
+		
+				<Text text="Functional Location" />
+			</Column>
+			<Column>
+				<Text text="Material" />
+			</Column>
+			<Column>
+				<Text text="Description" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem> 
+				<cells>
+					<!-- <Text	text="{returnOrderModel>serialNo}" /> -->
+					<Text	text="{returnOrderModel>SerialNumber}" />
+					<!-- <Text	text="{returnOrderModel>Status}"/> -->
+					<Text	text="{path: 'returnOrderModel>Status', formatter:'.formatter.statusText1'}" id="idStatus"/> 
+
+					<Link text="{returnOrderModel>ReturnOrder}"	press="onNavToCustomer" />
+				    <Text	text="{returnOrderModel>FunctionalLocation}" />
+					<!-- <Text	text="{returnOrderModel>returnOrder}" /> -->
+					<Text	text="{returnOrderModel>Material}" />
+					<Text	text="{returnOrderModel>Description}" />
+					
+			
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+	
+	</VBox>
+        </content>
+    </Page>
+</mvc:View>

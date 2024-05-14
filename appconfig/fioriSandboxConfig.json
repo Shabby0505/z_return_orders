@@ -1,0 +1,9 @@
+{
+  "applications": {
+    "ZSO_ORDERDETAILS-manage": {
+      "additionalInformation": "SAPUI5.Component=zsnetorderdetails",
+      "applicationType": "URL",
+      "url": "../resources/zsnetorderdetails"
+    }
+  }
+}

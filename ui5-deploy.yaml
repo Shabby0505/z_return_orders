@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: com.snet.re.order.zreturnorders
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: HANAS4DEV
+          url: http://s4fioridev.sagenet.com:8000
+        app:
+          name: Z_RETURN_ORDERS
+          description: RMA Fiori app for creating return order
+          package: ZFIORI_S4
+          transport: DEVK937962
+        exclude:
+          - /test/
