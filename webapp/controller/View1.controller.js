@@ -329,6 +329,7 @@ sap.ui.define([
                 for (i = 1; i <= 10; i++) {
                     this.getView().byId("sampleBarcodeScannerResult" + i).setValue('');
                 }
+                this.getView().byId("sidPartNumber").setValue('');
                 sap.ui.core.BusyIndicator.hide();
 
 
@@ -363,6 +364,7 @@ sap.ui.define([
 
                 var count = 0, scanner = [];
                 this.getView().byId("idReturnOrderBtn").setEnabled(false);
+                var oMaterial = this.getView().byId("sidPartNumber").getValue();
                 var oFilter = [];
                 sap.ui.core.BusyIndicator.show(0);
                 for (var i = 1; i <= 10; i++) {
@@ -376,14 +378,13 @@ sap.ui.define([
                     }
                 }
                 scanner.shift();
-                if (count === 0) {
-                    MessageToast.show("Please Enter Serial Number!!!");
-                    this.returnOrderModel.setData({});
-                    sap.ui.core.BusyIndicator.hide();
-                    return true;
-                }
-                else {
-
+                if (count !== 0 || oMaterial !== '') {
+                  
+                    if(oMaterial)
+                    {
+                        oFilter.push(new sap.ui.model.Filter("Material", sap.ui.model.FilterOperator.EQ, oMaterial));
+                    }
+                    
                     var oModel = this.getView().getModel();
                     this.returnOrderModel = new JSONModel();
                     this.getView().setModel(this.returnOrderModel, "returnOrderModel");
@@ -410,19 +411,28 @@ sap.ui.define([
                             //         default:
 
                             //     }
-                            // }
+                            // }                           
 
                            
                             sap.ui.core.BusyIndicator.hide();
                         }.bind(this),
                         error: function (oError) {
                          
-
+                            this.returnOrderModel = new JSONModel();
                             this.returnOrderModel.setData(null);
                             sap.ui.core.BusyIndicator.hide();
                             MessageToast.show(JSON.parse(oError.responseText).error.message.value);
                         }.bind(this),
                     });
+                }
+                else {
+                    this.returnOrderModel = new JSONModel();
+                    MessageToast.show("Please Enter Serial Number!!!");
+                    this.returnOrderModel.setData({});
+                    sap.ui.core.BusyIndicator.hide();
+                    return true;
+
+                    
                 }
 
             },
